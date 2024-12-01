@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: testtask
+  datasource:
+    url: jdbc:postgresql://db:6000/mydb
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  cache:
+    type: redis
+  redis:
+    host: redis
+    port: 6379
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    url: classpath:static/swagger.yml
+  swagger-ui:
+    url: swagger.yaml
+token:
+  signing:
+    key: JEOBJAOIDH1253BNMAPORAPLAMKQMNIBC907817HUA87H430JDC
